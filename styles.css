@@ -1,125 +1,84 @@
-/* =============================
-   RESET BÁSICO
-============================= */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =============================
-   ESTILOS GERAIS
-============================= */
+/* Corpo da página */
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #1e3a8a, #3b82f6);
-  color: #fff;
-  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* =============================
-   CABEÇALHO
-============================= */
-.cabecalho {
-  background: #111827;
+/* Cabeçalho */
+#cabecalho-principal {
+  background-color: #333;
+  color: #fff;
   padding: 20px;
   text-align: center;
-  border-bottom: 4px solid #3b82f6;
 }
 
-.cabecalho h1 {
-  margin-bottom: 10px;
-  font-size: 2em;
-}
-
-.menu ul {
+.menu {
   display: flex;
   justify-content: center;
   gap: 20px;
   list-style: none;
+  margin-top: 10px;
 }
 
 .menu a {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  transition: 0.3s;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
 .menu a:hover {
-  border-color: #3b82f6;
-  border-radius: 5px;
+  background-color: #4CAF50;
 }
 
-/* =============================
-   CONTAINER PRINCIPAL (FLEXBOX)
-============================= */
-.container {
+/* Seção principal */
+.intro {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+  margin: 30px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards de jogos */
+.container-jogos {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  flex-wrap: wrap;
   gap: 20px;
   padding: 30px;
 }
 
-/* =============================
-   CARDS
-============================= */
-.card {
-  background: #1e293b;
-  width: 280px;
-  border: 2px solid #3b82f6;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 10px;
-  transition: transform 0.3s, background 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  background: #3b82f6;
-}
-
-.card h2 {
-  font-size: 1.3em;
-  margin-bottom: 10px;
-}
-
-.card p {
-  font-size: 0.9em;
-  margin-bottom: 15px;
-}
-
-.nota {
-  display: inline-block;
-  background: #facc15;
-  color: #000;
-  padding: 5px 10px;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-/* =============================
-   RODAPÉ
-============================= */
-.rodape {
-  background: #111827;
+.jogo-card {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: 250px;
   padding: 20px;
   text-align: center;
-  border-top: 4px solid #3b82f6;
+  transition: transform 0.3s;
 }
 
-/* =============================
-   RESPONSIVIDADE
-============================= */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .card {
-    width: 90%;
-  }
+.jogo-card:hover {
+  transform: scale(1.05);
+}
+
+/* Rodapé */
+#rodape {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }

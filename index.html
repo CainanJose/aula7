@@ -4,55 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feedback de Jogos 🎮</title>
+
+  <!-- Importando o CSS de forma externa -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Cabeçalho -->
-  <header class="cabecalho">
-    <h1>🎮 Feedback dos Jogos Favoritos</h1>
-    <nav class="menu">
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Jogos</a></li>
-        <li><a href="#">Avaliações</a></li>
-        <li><a href="#">Contato</a></li>
+  <header id="cabecalho-principal">
+    <h1>🎮 Feedback de Jogos</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#jogos">Jogos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Container principal -->
-  <main class="container">
-
-    <!-- Card 1 -->
-    <section class="card">
-      <h2>God of War</h2>
-      <p>Gráficos impressionantes e uma história profunda entre pai e filho.</p>
-      <span class="nota">⭐ 9.8</span>
+  <!-- Seção principal -->
+  <main id="home">
+    <section class="intro">
+      <h2>Bem-vindo ao Portal de Feedback!</h2>
+      <p>Compartilhe suas opiniões sobre os jogos que ama (ou detesta 😅)</p>
     </section>
 
-    <!-- Card 2 -->
-    <section class="card">
-      <h2>Horizon Forbidden West</h2>
-      <p>Mundo aberto incrível com belos detalhes e jogabilidade fluida.</p>
-      <span class="nota">⭐ 9.5</span>
+    <!-- Área dos cards de jogos -->
+    <section id="jogos" class="container-jogos">
+      <div class="jogo-card">
+        <h3>God of War</h3>
+        <p>Um épico sobre mitologia e redenção.</p>
+      </div>
+
+      <div class="jogo-card">
+        <h3>GTA V</h3>
+        <p>Mundo aberto cheio de ação e caos urbano.</p>
+      </div>
+
+      <div class="jogo-card">
+        <h3>FIFA 25</h3>
+        <p>Experiência de futebol mais realista até agora.</p>
+      </div>
     </section>
-
-    <!-- Card 3 -->
-    <section class="card">
-      <h2>Spider-Man 2</h2>
-      <p>Exploração divertida e combate ágil com história envolvente.</p>
-      <span class="nota">⭐ 9.0</span>
-    </section>
-
-    <!-- (Adicione até 20 cards diferentes aqui) -->
-
   </main>
 
   <!-- Rodapé -->
-  <footer class="rodape">
-    <p>Projeto desenvolvido por Cainã — Aula 07: Box Model e Flexbox</p>
+  <footer id="rodape">
+    <p>&copy; 2025 - Projeto Feedback de Jogos</p>
   </footer>
 
+  <!-- Importando o JavaScript de forma externa -->
+  <script src="script.js"></script>
 </body>
 </html>
