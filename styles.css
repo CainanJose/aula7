@@ -1,30 +1,33 @@
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Corpo da página */
+/* ======= GERAL ======= */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5;
+  background: linear-gradient(120deg, #e0f7fa, #fff);
   color: #333;
   line-height: 1.6;
 }
 
-/* Cabeçalho */
+/* ======= CABEÇALHO ======= */
 #cabecalho-principal {
-  background-color: #333;
+  background-color: #263238;
   color: #fff;
   padding: 20px;
   text-align: center;
+  border-bottom: 5px solid #4CAF50; /* BOX MODEL */
 }
 
 .menu {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  display: flex;               /* FLEX 1 */
+  justify-content: center;     /* FLEX 2 */
+  align-items: center;         /* FLEX 3 */
+  gap: 15px;                   /* FLEX 4 */
+  flex-wrap: wrap;             /* FLEX 5 */
   list-style: none;
   margin-top: 10px;
 }
@@ -32,53 +35,133 @@ body {
 .menu a {
   color: white;
   text-decoration: none;
-  padding: 8px 15px;
+  background-color: #4CAF50;
+  padding: 8px 15px;           /* BOX MODEL */
   border-radius: 5px;
   transition: background 0.3s;
+  border: 1px solid #2e7d32;   /* BOX MODEL */
 }
 
 .menu a:hover {
-  background-color: #4CAF50;
+  background-color: #81c784;
 }
 
-/* Seção principal */
+/* ======= SEÇÃO INTRO ======= */
 .intro {
   text-align: center;
-  padding: 40px 20px;
+  padding: 40px 20px;          /* BOX MODEL */
   background-color: #fff;
-  margin: 30px auto;
+  margin: 30px auto;           /* BOX MODEL */
   max-width: 800px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ccc;      /* BOX MODEL */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Cards de jogos */
+/* ======= CONTAINER FLEX ======= */
 .container-jogos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 30px;
+  display: flex;               /* FLEX 6 */
+  flex-wrap: wrap;             /* FLEX 7 */
+  justify-content: space-around; /* FLEX 8 */
+  align-items: stretch;        /* FLEX 9 */
+  align-content: space-around; /* FLEX 10 */
+  gap: 20px;                   /* FLEX 11 */
+  padding: 30px;               /* BOX MODEL */
+  margin-bottom: 40px;         /* BOX MODEL */
 }
 
+/* ======= CARDS ======= */
 .jogo-card {
   background-color: #fff;
-  border: 2px solid #ccc;
+  width: 220px;
+  flex-grow: 1;                /* FLEX 12 */
+  flex-basis: 200px;           /* FLEX 13 */
+  flex-shrink: 1;              /* FLEX 14 */
+  padding: 20px;               /* BOX MODEL */
+  margin: 10px;                /* BOX MODEL */
+  border: 2px solid #ddd;      /* BOX MODEL */
   border-radius: 10px;
-  width: 250px;
-  padding: 20px;
+  display: flex;               /* FLEX 15 */
+  flex-direction: column;      /* FLEX 16 */
+  justify-content: space-between; /* FLEX 17 */
+  align-items: center;         /* FLEX 18 */
   text-align: center;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .jogo-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Rodapé */
+/* ======= RODAPÉ ======= */
 #rodape {
+  background-color: #263238;
+  color: #fff;
+  text-align: center;
+  padding: 15px;               /* BOX MODEL */
+  margin-top: 30px;            /* BOX MODEL */
+}
+
+
+/* ======= RESPONSIVIDADE ======= */
+
+/* Telas médias */
+@media (max-width: 900px) {
+  .container-jogos {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .jogo-card {
+    flex-basis: 45%;       /* FLEX 19 */
+  }
+}
+
+/* Telas pequenas */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column; /* FLEX 20 */
+  }
+
+  .jogo-card {
+    flex-basis: 90%;
+  }
+
+  .intro {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+
+/* Botão de voltar ao topo */
+.btn-topo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.btn-topo:hover {
+  background-color: #45a049;
+}
+
+/* Botão de tema */
+.btn-tema {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
   background-color: #333;
   color: white;
-  text-align: center;
-  padding: 15px;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
 }
